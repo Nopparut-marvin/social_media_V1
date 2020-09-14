@@ -1,10 +1,12 @@
 import React, { useState,useEffect } from "react";
 
 export default function UseInfinite(callback) {
+    
 const  [isFetching,setIsFetching] =useState(false)
 const handleScroll = () => {
-    if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
+    if (window.innerHeight + window.scrollY >= document.body.offsetHeight-1) {
         setIsFetching(true)
+        console.log("DO");
       }
 }
  
